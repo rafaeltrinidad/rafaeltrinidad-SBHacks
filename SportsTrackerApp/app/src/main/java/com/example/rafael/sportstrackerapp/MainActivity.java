@@ -17,26 +17,38 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button button = (Button) findViewById(R.id.left2);
-        button.setOnClickListener(new View.OnClickListener() {
+        Button button_L1 = (Button) findViewById(R.id.left1);
+        button_L1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                alterScore(true, 1);
+            }
+        });
+        Button button_L2 = (Button) findViewById(R.id.left2);
+        button_L2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 alterScore(true, 2);
             }
         });
-        Button button2 = (Button) findViewById(R.id.left3);
-        button2.setOnClickListener(new View.OnClickListener() {
+        Button button_L3 = (Button) findViewById(R.id.left3);
+        button_L3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 alterScore(true, 3);
             }
         });
-        Button button3 = (Button) findViewById(R.id.right2);
-        button3.setOnClickListener(new View.OnClickListener() {
+        Button button_R1 = (Button) findViewById(R.id.right1);
+        button_R1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                alterScore(false, 1);
+            }
+        });
+        Button button_R2 = (Button) findViewById(R.id.right2);
+        button_R2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 alterScore(false, 2);
             }
         });
-        Button button4 = (Button) findViewById(R.id.right3);
-        button4.setOnClickListener(new View.OnClickListener() {
+        Button button_R3 = (Button) findViewById(R.id.right3);
+        button_R3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 alterScore(false, 3);
             }
