@@ -17,14 +17,41 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         Button button = (Button) findViewById(R.id.left2);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                leftCount += 2;
-                TextView leftScore = (TextView) findViewById(R.id.leftScore);
-                leftScore.setText("" + leftCount);
+                alterScore(true, 2);
             }
         });
+        Button button2 = (Button) findViewById(R.id.left3);
+        button2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                alterScore(true, 3);
+            }
+        });
+        Button button3 = (Button) findViewById(R.id.right2);
+        button3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                alterScore(false, 2);
+            }
+        });
+        Button button4 = (Button) findViewById(R.id.right3);
+        button4.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                alterScore(false, 3);
+            }
+        });
+    }
+
+    private void alterScore(boolean isLeftScore, int amt) {
+        if(isLeftScore) {
+           leftCount += amt;
+           TextView leftScore = (TextView) findViewById(R.id.leftScore);
+           leftScore.setText("" + leftCount);
+        }else {
+            rightCount += amt;
+            TextView rightScore = (TextView) findViewById(R.id.rightScore);
+            rightScore.setText("" + rightCount);
+        }
     }
 }
