@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name">Sports Tracker App</string>
     <string name="sports_tracker">Sports Tracker</string>
-    <string name="_2_pts">2 pts</string>
-    <string name="_3_pts">3 pts</string>
-    <string name="_2_pts">2 pts</string>
-    <string name="_3_pts">3 pts</string>
+    <string name="_2_pts_1">2 pts</string>
+    <string name="_3_pts_1">3 pts</string>
+    <string name="_2_pts_2">2 pts</string>
+    <string name="_3_pts_2">3 pts</string>
     <string name="dash">-</string>
+    <string name="_2_pts">2 PTS</string>
 </resources>
